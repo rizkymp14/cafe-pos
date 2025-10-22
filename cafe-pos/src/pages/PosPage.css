@@ -1,0 +1,309 @@
+.pos-container {
+  display: flex;
+  font-family: sans-serif;
+  padding: 20px;
+  gap: 30px;
+  height: calc(100vh - 100px); /* Mengisi tinggi layar */
+}
+
+/* Bagian Kiri: Produk */
+.product-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-and-tabs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px; /* Beri jarak dari search bar */
+}
+
+.category-tabs button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.category-tabs button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.product-list {
+  flex-grow: 1;
+  overflow-y: auto; /* Membuat daftar produk bisa di-scroll */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding-right: 10px; /* Jarak untuk scrollbar */
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  cursor: default;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-details {
+  margin-bottom: 10px;
+}
+
+.product-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.product-info p {
+  margin: 0;
+  color: #555;
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Bagian Kanan: Ringkasan Pesanan */
+.order-summary {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-items {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* --- KODE BARU DIMULAI DI SINI --- */
+.item-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.order-item-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column; /* Mengatur nama di atas harga */
+  flex-grow: 1;
+}
+/* --- KODE BARU SELESAI DI SINI --- */
+
+.item-name {
+  font-weight: 500;
+}
+
+.item-price {
+  color: #555; /* Warna harga dibuat lebih soft */
+  font-size: 14px;
+}
+
+.item-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.qty-btn {
+  background-color: #d1d5db;
+  color: #333;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background-color: #b9bec4;
+}
+
+.item-qty {
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+.pay-button:hover {
+  background-color: #218838;
+}
+
+.pay-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* TAMBAHKAN DI AKHIR FILE */
+.search-bar {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; /* Agar padding tidak merusak layout */
+}
+
+/* ... (CSS yang sudah ada) ... */
+
+/* Gaya untuk teks catatan di keranjang */
+.item-note {
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Bungkus untuk tombol "Catatan" dan "Hapus" */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Tombol Catatan */
+.note-btn {
+  background-color: transparent;
+  color: #0d6efd; /* Biru */
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.note-btn:hover {
+  text-decoration: underline;
+}
+
+/* Sesuaikan tombol hapus agar mirip */
+.remove-btn {
+  padding: 5px;
+}
+
+/* Pastikan kontrol item sejajar dengan baik */
+.item-controls {
+  justify-content: space-between;
+}
+
+/* Penyesuaian kecil pada detail item */
+.item-details {
+  align-items: flex-start; /* Agar catatan rata kiri */
+}

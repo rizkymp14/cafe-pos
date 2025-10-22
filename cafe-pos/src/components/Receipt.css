@@ -1,0 +1,93 @@
+/* --- Gaya Normal (Struk Tersembunyi) --- */
+.receipt-container {
+  display: none; /* Sembunyikan struk di tampilan normal */
+  width: 300px; /* Lebar umum struk thermal */
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: #000;
+}
+
+/* --- Gaya Cetak (Hanya Struk yang Muncul) --- */
+@media print {
+  /* Sembunyikan semua elemen di body */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Tampilkan hanya kontainer struk dan semua isinya */
+  .receipt-container, .receipt-container * {
+    visibility: visible;
+  }
+  
+  /* Posisikan struk di sudut kiri atas halaman cetak */
+  .receipt-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  p {
+    margin: 3px 0;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px dashed #000;
+    margin: 8px 0;
+  }
+  
+  .receipt-items {
+    margin: 10px 0;
+  }
+  
+  .receipt-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .receipt-item .item-name {
+    flex-basis: 60%;
+  }
+  
+  .receipt-item .item-total {
+    flex-basis: 40%;
+    text-align: right;
+  }
+
+  .receipt-item .item-note {
+    flex-basis: 100%;
+    font-style: italic;
+    font-size: 11px;
+    padding-left: 10px;
+  }
+  
+  .receipt-summary p, .receipt-payment p {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+  }
+  
+  .receipt-summary p.total span, .receipt-summary p.total {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 11px;
+  }
+}

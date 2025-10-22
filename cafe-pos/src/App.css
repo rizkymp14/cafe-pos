@@ -1,0 +1,41 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #333;
+  color: white;
+  height: 60px;
+}
+
+.main-nav h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+main {
+  /* Set tinggi main agar PosPage bisa mengisi sisa layar */
+  height: calc(100vh - 60px); 
+}
+
+/* Sesuaikan PosPage.css agar tidak mengambil header bawaannya */
+/* Buka PosPage.css dan ubah .pos-container */
+/* .pos-container { height: calc(100vh - 100px); } -> .pos-container { height: 100%; } */

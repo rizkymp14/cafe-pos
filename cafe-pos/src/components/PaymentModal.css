@@ -1,0 +1,204 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Gaya untuk daftar rincian pesanan di modal */
+.order-details-list {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.order-details-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 5px;
+  font-size: 15px;
+  color: #000; /* Warna font hitam */
+}
+
+.order-details-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.total-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  color: #000; /* Warna font hitam */
+}
+
+.total-amount {
+  font-weight: bold;
+  color: #007bff; /* Warna nominal total tetap biru */
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.payment-methods button {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.payment-methods button.active {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.cash-payment {
+  margin-bottom: 15px;
+}
+
+.cash-payment label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.cash-payment input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.change-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  background-color: #e9f5ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.change-amount {
+  font-weight: bold;
+  color: #198754;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.modal-actions button {
+  flex-grow: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.confirm-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* --- Ini adalah kode baru untuk Tipe Pesanan & No. Meja --- */
+
+.order-type {
+  margin-top: 15px;
+}
+
+.order-type h4, .payment-method-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.table-number {
+  margin-bottom: 20px;
+}
+
+.table-number label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.table-number input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.order-details-item {
+  align-items: flex-start; /* Ratakan ke atas */
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-item-note {
+  font-size: 13px;
+  font-style: italic;
+  color: #333;
+  margin-top: 4px;
+}

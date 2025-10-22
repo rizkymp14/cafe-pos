@@ -1,0 +1,79 @@
+.history-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transaction-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.card-body ul {
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 15px 0;
+}
+
+.card-body li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-weight: bold;
+}
+
+.card-footer .total {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.card-header .order-type-info {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 15px;
+}
+
+.card-body li {
+  align-items: flex-start; /* Ratakan ke atas */
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item-note {
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  margin-top: 4px;
+}
